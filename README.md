@@ -80,13 +80,13 @@ Playbook with various options specified:
 - hosts: localhost
   connection: local
   roles:
-    - role: ansible-role-joplin
+    - role: joplin
       users:
         - username: test_usr1
           settings:
             - { key: "sidebarVisibility", val: "1" }
             - { key: "dateFormat", val: "YYYY-MM-DD" }
-            - { key: "sync.target", val: "5" }
+            - { key: "sync.target", val: "5" } # (2: File system, 3: OneDrive, 5: Nextcloud, 6: WebDAV, 7: Dropbox) :config sync.target 3 :sync  ALL config values: https://joplinapp.org/terminal/
 ```
 
 ## Inclusion
